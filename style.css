@@ -91,6 +91,57 @@ img {
     font-weight: 600;
 }
 
+/* Hamburger toggle button */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 0.35rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav-toggle .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    margin: 3px 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Mobile nav hidden by default; shown when .open is added */
+.main-nav.open {
+    display: flex;
+}
+
+@media (max-width: 640px) {
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        right: 1rem;
+        top: calc(100% + 0.6rem);
+        background: var(--surface);
+        border: 1px solid rgba(107, 81, 61, 0.08);
+        box-shadow: var(--shadow);
+        border-radius: 16px;
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 160px;
+        z-index: 50;
+    }
+
+    .main-nav a {
+        padding: 0.35rem 0.25rem;
+        display: block;
+    }
+}
+
 .hero {
     position: relative;
     padding: 5rem 0 3rem;
