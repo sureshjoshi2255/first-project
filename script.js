@@ -1,6 +1,7 @@
 const reservationForm = document.getElementById('reservation-form');
 const reservationMessage = document.getElementById('reservation-message');
 
+
 if (reservationForm) {
   reservationForm.addEventListener('submit', (event) => {
     event.preventDefault();
