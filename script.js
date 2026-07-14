@@ -10,7 +10,7 @@ if (reservationForm) {
     const name = formData.get('name') || 'Guest';
     const guests = formData.get('guests');
 
-    reservationMessage.textContent = `Thank you, ${name}! Your reservation request for ${guests} guest(s) has been received.`;
+    reservationMessage.textContent = `Thank you, ${name}! Your reservation request for ${guests} guest(s) has been received. See you at the cafe!`;
     reservationMessage.style.color = '#2e5939';
 
     reservationForm.reset();
